@@ -37,7 +37,7 @@ let time = startingMinutes * 60
 
 let countdownEl = document.getElementById("countdown")
 
-// const intervalID = setInterval(() => {updateCountdown()}, 1000);
+
 
 
 
