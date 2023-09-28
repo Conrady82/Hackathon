@@ -9,38 +9,38 @@
 // use phils head in alert box
 // once time has passed, allow box to be closed
 
-function invokeBlur(){
-    //html blur
-}
-const blurPageEveryHour = setTimeout(invokeBlur,3600000)
+// function invokeBlur(){
+//     //html blur
+// }
+// const blurPageEveryHour = setTimeout(invokeBlur,3600000)
 
 
-const
 
-let timeoutID;
 
-function setOutput(outputContent) {
-  document.querySelector("#output").textContent = outputContent;
-}
 
-function delayedMessage() {
-  setOutput("");
-  timeoutID = setTimeout(setOutput, 2 * 1000, "That was really slow!");
-}
 
-function clearMessage() {
-  clearTimeout(timeoutID);
-}
+// function setOutput(outputContent) {
+//   document.querySelector("#output").textContent = outputContent;
+// }
+
+// function delayedMessage() {
+//   setOutput("");
+//   timeoutID = setTimeout(setOutput, 2 * 1000, "That was really slow!");
+// }
+
+// function clearMessage() {
+//   clearTimeout(timeoutID);
+// }
 
 const startingMinutes = 60
 let time = StartingMinutes * 60
 
-const coundownEl = document.getElementById('countdown')
+const countdownEl = document.getElementById('countdown')
 
 setInterval(updateCountdown, 1000);
 
 function updateCountdown(){
-    const minutes= Math.floor(time/60);
+    const minutes = Math.floor(time/60);
     let seconds = time % 60;
 
     seconds = seconds < 10 ? '0' + seconds : seconds;
