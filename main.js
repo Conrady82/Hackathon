@@ -55,9 +55,9 @@ fetch(`https://api.api-ninjas.com/v1/exercises?type=${type}`, {
     .then(result => {
         let stretch = [];
         while (stretch.length < 3){
-          Stretch = Math.floor(Math.random() * 10)
-          if (!stretch.includes(Stretch)){
-            stretch.push(Stretch)
+          selected = Math.floor(Math.random() * 10)
+          if (!stretch.includes(selected)){
+            stretch.push(selected)
           }
         }
         for (let i = 0; i < 3; i++){
@@ -76,39 +76,11 @@ fetch(`https://api.api-ninjas.com/v1/exercises?type=${type}`, {
           const container = document.querySelector('#stretches')
           container.appendChild(stretchContainer)
 
-        //   document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
-        //   document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
-        //   document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
         }
     })
     .catch(error => {
         console.error('Error:', error.message);
     });
 
-
-// let stretch = [];
-//         while (stretch.length < 3){
-//           Stretch = Math.floor(Math.random() * 10)
-//           if (!stretch.includes(Stretch)){
-//             stretch.push(Stretch)
-//           }
-//         }
-//         document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
-//         document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
-//         document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
 myFunction()
 
-// var type = 'stretching'
-// $.ajax({
-//     method: 'GET',
-//     url: 'https://api.api-ninjas.com/v1/exercises?type=' + type,
-//     headers: { 'X-Api-Key': 'q68lLZCB0j+666FyU3BXkw==FVWU07FF1UiNBUGP'},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         document.querySelector('stretches').innerText(result)
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });
