@@ -14,32 +14,12 @@
 // }
 // const blurPageEveryHour = setTimeout(invokeBlur,3600000)
 
-
-
-
-
-
-// function setOutput(outputContent) {
-//   document.querySelector("#output").textContent = outputContent;
-// }
-
-// function delayedMessage() {
-//   setOutput("");
-//   timeoutID = setTimeout(setOutput, 2 * 1000, "That was really slow!");
-// }
-
-// function clearMessage() {
-//   clearTimeout(timeoutID);
-// }
-
 let startingMinutes = 5
 let time = startingMinutes * 60
 
 let countdownEl = document.getElementById("countdown")
 
 setInterval(() => {updateCountdown()}, 1000)
-
-
 
 function updateCountdown(){
     let minutes = Math.floor(time / 60);
@@ -54,8 +34,65 @@ function updateCountdown(){
 function myFunction(){
     alert("Time For Stretchies!!!");
 }
+
+
+const type = 'stretching';
+const apiKey = 'q68lLZCB0j+666FyU3BXkw==FVWU07FF1UiNBUGP';
+
+fetch(`https://api.api-ninjas.com/v1/exercises?type=${type}`, {
+    method: 'GET',
+    headers: {
+        'X-Api-Key': apiKey,
+        'Content-Type': 'application/json',
+    },
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(result => {
+        let stretch = [];
+        while (stretch.length < 3){
+          Stretch = Math.floor(Math.random() * 10)
+          if (!stretch.includes(Stretch)){
+            stretch.push(Stretch)
+          }
+        }
+        document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
+        document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
+        document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
+
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+    });
+
+
+// let stretch = [];
+//         while (stretch.length < 3){
+//           Stretch = Math.floor(Math.random() * 10)
+//           if (!stretch.includes(Stretch)){
+//             stretch.push(Stretch)
+//           }
+//         }
+//         document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
+//         document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
+//         document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
 myFunction()
-document.addEventListener('DOMContentLoaded', function(){
-    // document.querySelector('#start').addEventListener('click', updateCountdown());
-    document.querySelector('#video').addEventListener('click', myFunction());
-  });
+
+// var type = 'stretching'
+// $.ajax({
+//     method: 'GET',
+//     url: 'https://api.api-ninjas.com/v1/exercises?type=' + type,
+//     headers: { 'X-Api-Key': 'q68lLZCB0j+666FyU3BXkw==FVWU07FF1UiNBUGP'},
+//     contentType: 'application/json',
+//     success: function(result) {
+//         document.querySelector('stretches').innerText(result)
+//         console.log(result);
+//     },
+//     error: function ajaxError(jqXHR) {
+//         console.error('Error: ', jqXHR.responseText);
+//     }
+// });
