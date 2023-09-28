@@ -52,7 +52,7 @@ function updateCountdown(){
 }
 
 function myFunction(){
-    alert("No YOU lame");
+    alert("Time For Stretchies!!!");
 }
 
 document.addEventListener('DOMContentLoaded', function(){
