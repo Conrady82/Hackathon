@@ -1,5 +1,5 @@
 
-let startingMinutes = .1
+let startingMinutes = 5
 let time = startingMinutes * 60
 
 let countdownEl = document.getElementById("countdown")
@@ -21,7 +21,7 @@ function updateCountdown(){
 }
 
 function myFunction(){
-    alert("Time For Stretchies!!!");
+    alert("TIME FOR STRETCHIES!!!");
 }
 
 function endStretch(){

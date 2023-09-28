@@ -1,7 +1,7 @@
 {
     "manifest_version" : 2,
-    "name" : "StretchyTIme",
-    "version" : "1.0",
+    "name" : "StretchyTime",
+    "version" : "0.1",
     "description" : "Have a short stretch break after working for a while",
     "browser_action": {
         "default_popup": "popup.html"
