@@ -60,10 +60,26 @@ fetch(`https://api.api-ninjas.com/v1/exercises?type=${type}`, {
             stretch.push(Stretch)
           }
         }
-        document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
-        document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
-        document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
+        for (let i = 0; i < 3; i++){
+          const stretchContainer = document.createElement('div')
+          stretchContainer.setAttribute('class', 'stretchContainer')
 
+          const stret = document.createElement('h2');
+          stret.innerText = result[stretch[i]].name;
+
+          const instruc = document.createElement('span')
+          instruc.innerText = result[stretch[i]].instructions;
+
+          stretchContainer.appendChild(stret)
+          stretchContainer.appendChild(instruc)
+
+          const container = document.querySelector('#stretches')
+          container.appendChild(stretchContainer)
+
+        //   document.querySelector('#stretches').innerHTML += result[stretch[0]].instructions;
+        //   document.querySelector('#stretches').innerHTML += result[stretch[1]].instructions;
+        //   document.querySelector('#stretches').innerHTML += result[stretch[2]].instructions;
+        }
     })
     .catch(error => {
         console.error('Error:', error.message);
