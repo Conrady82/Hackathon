@@ -1,0 +1,12 @@
+{
+    "manifest_version" : 3,
+    "name" : "OnTrack",
+    "version" : "1.0",
+    "description" : "Keeps you on track by removing the suggested videos column AND the comments section when you visit a youtube video.",
+    "content_scripts" : [
+        {
+            "matches" : ["https://www.youtube.com/watch*"],
+            "js" : ["jquery.min.js", "./main.js"]
+        }
+    ]
+}
