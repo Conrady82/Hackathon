@@ -56,6 +56,6 @@ function myFunction(){
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('#start').addEventListener('click', updateCountdown());
+    // document.querySelector('#start').addEventListener('click', updateCountdown());
     document.querySelector('#video').addEventListener('click', myFunction());
   });
