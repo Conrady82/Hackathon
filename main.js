@@ -51,6 +51,6 @@ function updateCountdown(){
     time--;
 }
 
-function youLame(){
+function myFunction(){
     alert("No YOU lame");
 }
