@@ -54,7 +54,7 @@ function updateCountdown(){
 function myFunction(){
     alert("Time For Stretchies!!!");
 }
-
+myFunction()
 document.addEventListener('DOMContentLoaded', function(){
     // document.querySelector('#start').addEventListener('click', updateCountdown());
     document.querySelector('#video').addEventListener('click', myFunction());
