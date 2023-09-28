@@ -1,12 +1,20 @@
 {
     "manifest_version" : 3,
-    "name" : "OnTrack",
+    "name" : "StretchyTIme",
     "version" : "1.0",
-    "description" : "Keeps you on track by removing the suggested videos column AND the comments section when you visit a youtube video.",
+    "description" : "Have a short stretch break after working for a while",
+    "browser_action": {
+        "default icon": {
+            "16": "",
+            "24": "",
+            "32": ""
+        },
+        "default_popup": "popup.html"
+    },
     "content_scripts" : [
         {
-            "matches" : ["https://www.youtube.com/watch*"],
-            "js" : ["jquery.min.js", "./main.js"]
+            "js" : ["jquery.main.js", "main.js"],
+            "main": "index.js"
         }
     ]
 }

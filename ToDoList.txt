@@ -1,0 +1,10 @@
+Chrome extenstion that has a timer to force user to stretch
+Once the timer has reached its set time to invoke, screen will blur via html
+once screen is blurred, settime to remove blur for 5 min
+timer needs to start when an event happens (event listener), initialize at page load
+------------create a cache variable to store the initialized time
+set timeout for 1 hour to then inovoke blur
+-------create recursive function that checks the time of cache and if the ---------time matches again,  invoke screen blur
+create pop up with count down that shows how long of a duration to stretch for
+use phils head in alert box
+once time has passed, allow box to be closed
