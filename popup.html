@@ -4,13 +4,13 @@
     <div style="display: flex; width: 400px;
                 justify-content: space-evenly;
                 align-items: flex-start; padding-top: 10%;">
-                <button onclick="myFunction()">Try it</button>
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=3R_BSL7nOOM';">Stretching is lame</button>
+                <button id="start" onclick="updateCountdown()">Try it</button>
+                <button id="video" onclick="myFunction()">Stretching is lame</button>
                 
                 <div id="output"></div>
             </div>        
             <div style="display: flex; width:400px; height: 100px;
-                justify-content:center; padding-top: 50px;">
+                justify-content:center; padding-top: 10px; font-size: 20px;background-color:rgb(0, 0, 0); color: rgb(200, 69, 212)">
          Time Left Until Stretchy Time<br />
         </div>
         <div style="display:block; justify-content: center; text-align: center; font-size: 30px; color:tomato"><p id="countdown"></p></div>

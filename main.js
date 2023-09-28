@@ -54,3 +54,8 @@ function updateCountdown(){
 function myFunction(){
     alert("No YOU lame");
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('#start').addEventListener('click', updateCountdown());
+    document.querySelector('#video').addEventListener('click', myFunction());
+  });
