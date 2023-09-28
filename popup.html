@@ -2,9 +2,9 @@
 <body>
     <div style="display: flex; width: 400px;
                 justify-content: space-evenly;
-                align-items: flex-start; padding-top: -20%;">
-                <button onclick="setInterval();">Click if you want to strech</button>
-                <button onclick="clearMessage();">Stretching is lame</button>
+                align-items: flex-start; padding-top: 10%;">
+                <button onclick="const intervalID = setInterval(() => {updateCountdown()}, 1000);">Click if you want to strech</button>
+                <button onclick="clearInterval(intervalID);">Stretching is lame</button>
                 
                 <div id="output"></div>
     </div>        
