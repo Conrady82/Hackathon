@@ -10,10 +10,6 @@
         //     "32": ""
         // },
         "default_popup": "popup.html"
-    },
-    "content_scripts" : [
-        {
-            "js" : "main.js"
-        }
-    ]
+    }
+
 }
