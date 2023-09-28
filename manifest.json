@@ -4,16 +4,16 @@
     "version" : "1.0",
     "description" : "Have a short stretch break after working for a while",
     "browser_action": {
-        "default icon": {
-            "16": "",
-            "24": "",
-            "32": ""
-        },
+        // "default icon": {
+        //     "16": "",
+        //     "24": "",
+        //     "32": ""
+        // },
         "default_popup": "popup.html"
     },
     "content_scripts" : [
         {
-            "js" : ["jquery.main.js", "main.js"],
+            "js" : "main.js",
             "main": "index.js"
         }
     ]
