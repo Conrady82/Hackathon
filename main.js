@@ -76,3 +76,6 @@ function getminutes() {
 function getseconds() {
     return secs-Math.round(mins*60);
 }
+
+
+
