@@ -15,6 +15,8 @@ function invokeBlur(){
 const blurPageEveryHour = setTimeout(invokeBlur,3600000)
 
 
+const
+
 let timeoutID;
 
 function setOutput(outputContent) {
@@ -30,42 +32,14 @@ function clearMessage() {
   clearTimeout(timeoutID);
 }
 
-let mins=.1;
-let secs=mins*60;
-function countdown() {
-    setTimeout('Decrement()',60);
-}
-function Decrement() {
-    if(document.getElementById) {
-        minutes=document.getElementById("minutes");            seconds=document.getElementById("seconds");
-        if(seconds<59) {
-            seconds.value=secs;
-        }
-        else {
-            minutes.value=getminutes();
-            seconds.value=getseconds();
-        }
-        if(mins<1) {
-            minutes.style.color="red";
-            seconds.style.color="red";
-            }
-        if(mins<0) {
-            alert('time up');
-            minutes.value=0;
-            seconds.value=0;
-            }
-        else {
-            secs--;
-            setTimeout('Decrement()',1000);
-        }
-    }
-}
- 
-function getminutes() {
-    mins=Math.floor(secs/60);
-    return mins;
-}
- 
-function getseconds() {
-    return secs-Math.round(mins*60);
+const startingMinutes = 60
+let time = StartingMinutes * 60
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown(){
+    const minutes= Math.floor(time/60);
+    let seconds = time % 60;
+
+    countdownEl.innerHTML = `${minutes} : ${seconds}`;
 }
