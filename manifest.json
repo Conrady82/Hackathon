@@ -1,5 +1,5 @@
 {
-    "manifest_version" : 3,
+    "manifest_version" : 2,
     "name" : "StretchyTIme",
     "version" : "1.0",
     "description" : "Have a short stretch break after working for a while",
