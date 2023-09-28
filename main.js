@@ -14,6 +14,14 @@ function invokeBlur(){
 }
 const blurPageEveryHour = setTimeout(invokeBlur,3600000)
 
+let minute = 60
+function minutes()  {
+    if (minute === 60) return document.querySelector("#output").textContent = minute
+    timeoutID = setTimeout(() => {
+        minute--
+        return document.querySelector("#output").textContent = minute}, 60000)
+}
+
 let timeoutID;
 
 function setOutput(outputContent) {
