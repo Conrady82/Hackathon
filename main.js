@@ -52,5 +52,5 @@ function updateCountdown(){
 }
 
 function youLame(){
-    window.alert("No YOU lame")
+    alert("No YOU lame");
 }
