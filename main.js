@@ -32,7 +32,7 @@
 //   clearTimeout(timeoutID);
 // }
 
-let startingMinutes = 60
+let startingMinutes = 5
 let time = startingMinutes * 60
 
 let countdownEl = document.getElementById("countdown")
