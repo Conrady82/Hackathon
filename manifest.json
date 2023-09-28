@@ -4,11 +4,6 @@
     "version" : "1.0",
     "description" : "Have a short stretch break after working for a while",
     "browser_action": {
-        // "default icon": {
-        //     "16": "",
-        //     "24": "",
-        //     "32": ""
-        // },
         "default_popup": "popup.html"
     }
 
